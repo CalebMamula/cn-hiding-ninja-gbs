@@ -1,4 +1,4 @@
-//% weight=100 color=#ff7f50 icon="\uf0ae"
+//% weight=100 color=#20bf6b icon="\uf0ae"
 namespace Custom {
     //% block="repeat $numberOfRounds times for $enemiesPerRound enemies each round"
     //% draggableParameters="reporter"
