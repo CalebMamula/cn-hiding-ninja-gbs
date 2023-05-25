@@ -201,7 +201,7 @@ Did you notice your character can go off screen? To fix this we are going to use
 ### Add The Ninja
 
 
-Now we are going to create our hiding character. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ||loops: on start|| container.
+Now we are going to create our hiding character. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ``||loops: on start||`` container.
 
 
 Click the grey oval and select the ninja picture under **My Assets**. Feel free to change this sprite and make it your own.
@@ -225,7 +225,7 @@ Try it out!
 ## GBS: Hiding Ninja Step 6
 ### Spawning The Enemies
 
-The ninja is always out in the open and easy to find, so let's fix that. Now we are going to create our enemy. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of your code.
+The ninja is always out in the open and easy to find, so let's fix that. Now we are going to create our enemies to hide the ninja. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of your code.
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
 
