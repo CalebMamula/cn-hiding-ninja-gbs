@@ -132,7 +132,7 @@ export const Ninja = SpriteKind.create()
 
 ## Introduction @showdialog
 In this tutorial, you will create your very own video game. A ninja is playing hide and seek, and it's up to you to find him in each round. The game will get harder each time you find the ninja. Follow the instructions, but feel free to be creative and add custom details. Click Ok to get started!
-![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs/master/images./hiding_ninja_gif.gif)
+![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs/master/images./hiding_ninja_gif.gif.gif)
 ## GBS: Hiding Ninja Step 1
 ### Making Our Background  
 
