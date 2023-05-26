@@ -107,8 +107,7 @@ pauseUntil(() => mySprite.overlapsWith(otherSprite))
 
 
 ```blockconfig.global
-    pause(50)
-
+pause(50)
 let mySprite: Sprite = null
 mySprite.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
 pauseUntil(() => mySprite.overlapsWith(otherSprite))
@@ -118,12 +117,7 @@ pauseUntil(() => mySprite.overlapsWith(otherSprite))
 
 
 ```customts
-namespace SpriteKind {
-    export const Ninja = SpriteKind.create()
-}
 
-
-export const Ninja = SpriteKind.create()
 
 ```
 
