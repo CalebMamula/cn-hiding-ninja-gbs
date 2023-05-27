@@ -116,12 +116,6 @@ pauseUntil(() => mySprite.overlapsWith(otherSprite))
 ```
 
 
-```customts
-
-
-```
-
-
 
 
 ## Introduction @showdialog
