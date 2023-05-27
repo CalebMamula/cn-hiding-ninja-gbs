@@ -127,12 +127,12 @@ In this tutorial, you will create your very own video game. A ninja is playing h
 
 
 
-First up, our game needs a background. Grab a ``||scene:set background color||`` block from the ``||scene:Scene|`` dropdown and place it inside our ``||loops:on start||`` container already on the screen.
+First up, our game needs a background. Grab a ``||scene:set background color to||`` block from the ``||scene:Scene|`` dropdown and place it inside our ``||loops:on start||`` container already on the screen.
 
 
 
 
-Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background.
+Click the grey bubble in the ``||scene: set background color to||`` block and select a color to use as a background.
 
 
 
