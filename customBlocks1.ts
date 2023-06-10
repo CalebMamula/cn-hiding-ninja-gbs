@@ -5,7 +5,7 @@ namespace Custom {
     //% draggableParametersNames=""
     //% draggableParametersTypes=""
     //% handlerStatement=true
-    //% blockNamespace="Sprites"
+    //% blockNamespace="sprites"
     //% category="Sprites"
     export function nestedContainerWithPause(numberOfRounds: number, enemiesPerRound: number, handler: () => void) {
        Ninja.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
