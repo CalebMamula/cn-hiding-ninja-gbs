@@ -217,15 +217,15 @@ The ninja is always out in the open and easy to find, so let's fix that. Now we 
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
 
-Be sure to click on Player and change it to Enemy. This will be needed later.
+Be sure to click on Player and change it to Enemy. This will be needed later. Also be sure to rename the variable from **mySprite** to something else.
 
-We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this use a ``||sprites:set (mySprite) position to||``. Make sure to change it so we are setting the position of our enemy Sprite.
+We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this use a ``||sprites:set (mySprite) position to||``. Make sure to change it so we are setting the position of our Enemy Sprite.
 
 
 ## GBS: Hiding Ninja Step 7
 ### Repeat Repeating Rounds
 
-We only have 1 enemy on screen, and we need to change that. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [0] times for [0] enemies each round||`` block. Place this above where we set our enemy, then drag 
+We only have 1 enemy on screen, and we need to change that. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [0] times for [0] enemies each round||`` block. Place this above where we set our enemy, then drag the blocks for creating the enemy and the last position block into here.
 
 The first number sets the amount of times our code will run. Set this to 10 for now.
 
@@ -245,9 +245,9 @@ Next we need a ``||loops:pause (50) ms||`` block placed **BEFORE** the ``||sprit
 
 To make this game more fun, we need to be able to destroy the enemies. To start, grab another ``||sprites:on sprite of kind (Player) overlaps otherSprite of kind (Player)||`` container. This time we want to change the second **Player** to **Enemy**.
 
-Inside this container add a ``||sprites:destroy (mySprite)||``. Click the (+) and pick a fun effect. I recommend disintegrate and 200 ms, but you can pick anything.
+Inside this container add a ``||sprites:destroy (mySprite)||``. Drag an **otherSprite** where it says mySprite. Now click the (+) and pick a fun effect. I recommend disintegrate and 200 ms, but you can pick anything.
 
-Now, the main game is complete! Let's finish it off by placing a ``||game:game over||`` block at the very end of the code, right below the repeat block.
+Now, the main game is complete! Let's finish it off by placing a ``||game:game over||`` block at the very end of the code, right below the repeat block. (The bottom of the ``||loops:on start||``.)
 
 Try it out! When you are ready, go to the next step.
 
