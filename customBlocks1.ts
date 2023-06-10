@@ -1,20 +1,12 @@
-//% weight=100 color=#20bf6b icon="\uf0ae"
+//% weight=100 color=#4b7bec icon="\uf0ae"
 namespace Custom {
-    //% block="repeat $numberOfRounds times for $enemiesPerRound enemies each round"
+    //% block="set $sprite=variables_get(mySprite) to random position"
     //% draggableParameters="reporter"
     //% draggableParametersNames=""
     //% draggableParametersTypes=""
     //% handlerStatement=true
-    //% blockNamespace="loops"
-    //% category="Loops"
+    //% blockNamespace="Sprites"
+    //% category="Sprites"
     export function nestedContainerWithPause(numberOfRounds: number, enemiesPerRound: number, handler: () => void) {
-        for (let i = 0; i < numberOfRounds; i++) {
-            for (let j = 0; j < enemiesPerRound; j++) {
-                handler();
-            }
-            if (i < numberOfRounds - 1) {
-                pause(100); // Adjust the pause duration as needed
-            }
-        }
-    }
+       Ninja.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
 }
