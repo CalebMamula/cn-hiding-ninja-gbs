@@ -93,7 +93,6 @@ Custom.nestedContainerWithPause(10, 30, function () {
         . . . . . . b b b b 3 d d d b a 
         . . . . . . . . . . b b b a a . 
         `, SpriteKind.Enemy)
-    cake.setPosition()
     pauseUntil(() => duck.overlapsWith(ninja))
 })
 game.gameOver(true)
