@@ -28,7 +28,7 @@
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Ninja, function (sprite, otherSprite) {
     pause(50)
-    ninja.setPosition()
+    
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.confetti, 200)
@@ -54,7 +54,6 @@ ninja = sprites.create(img`
     . . . . f f . f f . . . 
     . . . f f f . f f f . . 
     `, SpriteKind.Ninja)
-ninja.setPosition()
 let duck = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
@@ -109,7 +108,6 @@ Custom.randomPosition(mySprite)
 ```blockconfig.global
 pause(50)
 let mySprite: Sprite = null
-mySprite.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
 pauseUntil(() => mySprite.overlapsWith(otherSprite))
 
 
