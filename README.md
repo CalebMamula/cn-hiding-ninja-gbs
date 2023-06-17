@@ -102,7 +102,7 @@ namespace SpriteKind {
     export const Ninja = SpriteKind.create()
 }
 pauseUntil(() => mySprite.overlapsWith(otherSprite))
-
+Custom.randomPosition(mySprite)
 ```
 
 
