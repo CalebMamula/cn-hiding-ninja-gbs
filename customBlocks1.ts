@@ -1,4 +1,4 @@
-//% weight=100 color=#4b7bec icon="\uf0ae"
+//% weight=0 color=#4b7bec icon="\uf0ae"
 namespace Custom {
     //% block="set $sprite=variables_get(mySprite) to random position"
     //% draggableParameters="reporter"
