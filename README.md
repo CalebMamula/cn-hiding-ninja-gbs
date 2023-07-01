@@ -124,41 +124,25 @@ In this tutorial, you will create your very own video game. A ninja is playing h
 
 
 
-First up, our game needs a background. Grab a ``||scene:set background color to||`` block from the ``||scene:Scene|`` dropdown and place it inside our ``||loops:on start||`` container already on the screen.
+First up, our game needs a background. Open ``||scene:Scene|`` and drag ``||scene:set background color||`` inside the ``||loops:on start||`` container already on the screen.
 
 
+Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background.
 
 
-Click the grey bubble in the ``||scene: set background color to||`` block and select a color to use as a background.
-
-
-
-
-Chcek the Game Window on the right side of the screen to see the selected background color appear!
-
-
+Check the Game Window on the right side of the screen to see the selected background color appear!
 
 
 Click **Next** to go to the next step.
 
 
 
-
 ## GBS: Hiding Ninja Step 2
 ### Add Our Player Sprite
 
-
-
-
-Now we are going to create our main character. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ``||loops: on start||`` container.
-
-
-
+Now we are going to create our main character. Open ``||sprites:Sprites||`` and drag the ``||variables:set [mySprite] to||`` block to the bottom of the ``||loops: on start||`` container.
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
-
-
-
 
 Make sure to change the name of your sprite by clicking on **mySprite** and pressing **Rename variable**. Pick any name for your character, just remember what you chose.
 
@@ -166,39 +150,30 @@ Make sure to change the name of your sprite by clicking on **mySprite** and pres
 ## GBS: Hiding Ninja Step 3
 ### Code Movement
 
+To move our ninja we need to open ``||controller:Controller||`` and drag ``||controller:move [mySprite] with buttons||`` block to the bottom of the ``||loops:on start||`` container.
 
+We need to tell the game which sprite we want to move. Make sure to change **mySprite** to **Ninja**. This means the arrow keys and WASD can now move the ninja. Try it out!
 
-
-To move our ninja we need to use a ``||controller:move [mySprite] with buttons||`` block. Place this at the bottom of the ``||loops:on start||`` container.
-
-
-
-
-We need to tell the game which sprite we want to move. Make sure to change **mySprite** to the player name you picked. This means the arrow keys and WASD can now move the ninja. Try it out!
-
-
-
-
-Did you notice your character can go off screen? To fix this we are going to use ``||sprites:set (mySprite) stay in screen ||``. Once again, be sure to change **mySprite** to your player sprite's name.
+Did you notice your character can go off screen? To fix this we are going to open ``||sprites:Sprites||`` and drag ``||sprites:set [mySprite] stay in screen |`` to the bottom of our ``||loops:on start||``. Once again, be sure to change **mySprite** to **Ninja**.
 
 
 ## GBS: Hiding Ninja Step 4
 ### Add The Ninja
 
 
-Now we are going to create our hiding character. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ``||loops: on start||`` container.
+Now we are going to create our hiding character. Open ``||sprites:Sprites||`` and drag the ``||variables:set [mySprite] to||`` block to the bottom of the ``||loops:on start||`` container.
 
 
 Click the grey oval and select the ninja picture under **My Assets**. Feel free to change this sprite and make it your own.
 
 Click on **Player** and click add a new kind. Call this **Hider**.
 
-Make sure to change the name of your sprite by clicking on mySprite and pressing Rename variable. Change the name to Ninja, or something else if you'd like. Just remember what you chose.
+Make sure to change the name of your sprite by clicking on **mySprite** and pressing Rename variable. Change the name to Ninja, or something else if you'd like. Just remember what you chose.
 
 
 ## GBS: Hiding Ninja Step 5
 ### Basic Hide And Seek
-For a good game of hide and seek, we can't hide in the same place every round. Use a ``||sprites:set (mySprite) position to||`` to randomize where the ninja goes. Try and run the game a few times and see what happens. Don't forgot to change **mySprite** to **Ninja**.
+For a good game of hide and seek, we can't hide in the same place every round. Use a ``||sprites:set [mySprite] position to||`` to randomize where the ninja goes. Try and run the game a few times an  d see what happens. Don't forgot to change **mySprite** to **Ninja**.
 
 Next up, we need to detect when we find the ninja. A ``||sprites:on sprite of kind (Player) overlaps otherSprite of kind (Player)||`` will allow us to do this. This is a new container, so you can place it anywhere in the editor. Change the second **Player** to **Hider**.
 
@@ -216,13 +191,13 @@ Click the grey oval and select a sprite of your choice from **Gallery**.
 
 Be sure to click on Player and change it to Enemy. This will be needed later. Also be sure to rename the variable from **mySprite** to something else.
 
-We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this use a ``||sprites:set (mySprite) position to||``. Make sure to change it so we are setting the position of our Enemy Sprite.
+We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this use a ``||sprites:set [mySprite] position to||``. Make sure to change it so we are setting the position of our Enemy sprite.
 
 
 ## GBS: Hiding Ninja Step 7
 ### Repeat Repeating Rounds
 
-We only have 1 enemy on screen, and we need to change that. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [0] times for [0] enemies each round||`` block. Place this above where we set our enemy, then drag the blocks for creating the enemy and the last position block into here.
+We only have 1 enemy on screen, and we need to change that. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [0] times for [0] enemies each round||`` block. Place this above where we set our enemy, then drag the blocks for creating the enemy setting it's position block into here.
 
 The first number sets the amount of times our code will run. Set this to 10 for now.
 
