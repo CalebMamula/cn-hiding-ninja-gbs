@@ -189,7 +189,7 @@ Try the game out now!
 ## GBS: Hiding Ninja Step 7
 ### Spawning The Enemies
 
-The ninja is always out in the open and easy to find, so let's fix that. Now we are going to create our enemies to hide the ninja. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the overlap container.
+The ninja is always out in the open and easy to find, so let's fix that. Now we are going to create our enemies to hide the ninja. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ``||sprites:overlap||`` container.
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
 
@@ -212,7 +212,7 @@ Inside this container add a ``||sprites:destroy (mySprite)||``. Drag an **otherS
 ## GBS: Hiding Ninja Step 8
 ### A Way To Win
 
-At the moment, our game goes on forever. We need to program a way to end, and we will use the built in score system to do this. Start by going to ``||loops:Info||`` and getting a ``||info:change score by [1]||`` block. Put this inside the first ``||sprites:overlap||`` container you made, the one that checks if the **Player** and **Hider** sprites touch. Make sure to put this OUTSIDE the ``||loops:repeat||`` block. We want 1 point when we find the ninja, not 30.
+At the moment, our game goes on forever. We need to program a way to end, and we will use the built in score system to do this. Start by going to ``||info:Info||`` and getting a ``||info:change score by [1]||`` block. Put this inside the first ``||sprites:overlap||`` container you made, the one that checks if the **Player** and **Hider** sprites touch. Make sure to put this OUTSIDE the ``||loops:repeat||`` block. We want 1 point when we find the ninja, not 30.
 
 Now to check once we find the goal amount. We need a ``||info:on score [100]||`` container, and as with the other containers, you can place this anywhere. Change the 100 to 10, so that the ninja only needs to be found 10 times.
 
