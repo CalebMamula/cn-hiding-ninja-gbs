@@ -177,7 +177,7 @@ For a good game of hide and seek, we can't hide in the same place every round. U
 
 Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into the x oval of our ``||sprites:set  [mySprite] position to ||`` block. Change the 10 to 160. Do the same thing and place a ``||math:pick random||`` inside the y oval. This time we need to change the 10 to 120. Now our ninja will start the each game at a random place on the screen.
 
- ## GBS: Hiding Ninja Step 6
+## GBS: Hiding Ninja Step 6
 ### Finding the Ninja
 Next up, we need to detect when we find the ninja. A ``||sprites:on sprite of kind (Player) overlaps otherSprite of kind (Player)||`` will allow us to do this. This is a new container, so you can place it anywhere in the editor. Change the second **Player** to **Hider**.
 
