@@ -216,7 +216,7 @@ At the moment, our game goes on forever. We need to program a way to end, and we
 
 Now to check once we find the goal amount. We need a ``||info:on score [100]||`` container, and as with the other containers, you can place this anywhere. Change the 100 to 10, so that the ninja only needs to be found 10 times.
 
-Put a ``||game:game over [WIN]||`` inside this new container. The game will now end when the ninja is found 10 times!
+Finally, put a ``||game:game over||`` block inside this new container. The game will now end when the ninja is found 10 times!
 
 ## GBS: Ninja Invasion Step 9
 ### ``||variables:C||`` ``||controller:u||`` ``||loops:s||`` ``||animation:t||`` ``||logic:o||`` ``||sprites:m||`` ``||music:i||`` ``||math:z||`` ``||scene:e||``
