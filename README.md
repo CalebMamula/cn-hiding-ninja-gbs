@@ -198,7 +198,7 @@ Be sure to click on **Player** and change it to **Enemy**. This will be needed l
 We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this use a ``||sprites:set [mySprite] position to||``. Make sure to change it so we are setting the position of our Enemy sprite.
 
 
-## GBS: Hiding Ninja Step 7
+## GBS: Hiding Ninja Step 8
 ### Repeat The Enemies, Eat The Enemies
 
 We only have 1 enemy on screen, and we need to change that. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [4] times||`` block. Place this above where we set our enemy, then drag the blocks for creating the enemy setting it's position block into here.
@@ -209,7 +209,7 @@ To make sure we don't have hundreds of enemies at once, we need to be able to de
 
 Inside this container add a ``||sprites:destroy (mySprite)||``. Drag an **otherSprite** where it says mySprite. Now click the (+) and pick a fun effect and how long the effect lasts. I recommend disintegrate and 200 ms, but you can pick anything.
 
-## GBS: Hiding Ninja Step 8
+## GBS: Hiding Ninja Step 9
 ### A Way To Win
 
 At the moment, our game goes on forever. We need to program a way to end, and we will use the built in score system to do this. Start by going to ``||info:Info||`` and getting a ``||info:change score by [1]||`` block. Put this inside the first ``||sprites:overlap||`` container you made, the one that checks if the **Player** and **Hider** sprites touch. Make sure to put this OUTSIDE the ``||loops:repeat||`` block. We want 1 point when we find the ninja, not 30.
@@ -218,7 +218,7 @@ Now to check once we find the goal amount. We need a ``||info:on score [100]||``
 
 Finally, put a ``||game:game over||`` block inside this new container. The game will now end when the ninja is found 10 times!
 
-## GBS: Ninja Invasion Step 9
+## GBS: Ninja Invasion Step 10
 ### ``||variables:C||`` ``||controller:u||`` ``||loops:s||`` ``||animation:t||`` ``||logic:o||`` ``||sprites:m||`` ``||music:i||`` ``||math:z||`` ``||scene:e||``
 **The tutorial is finished, but now it's time to customize. Here are a few examples of things to try:**
 
