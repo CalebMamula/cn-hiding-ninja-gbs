@@ -1,1 +1,286 @@
+### @explicitHints true
+# Code Ninjas Hiding Ninjas GBS
 
+```assetjson
+{
+  "README.md": " ",
+  "assets.json": "",
+  "images.g.jres": "{\n    \"P4(`CNLh^)P:D9Kpa+R5\": {\n        \"data\": \"hwQMABAAAAAADw8AAAAAAADwAAAA8A8AAP//APAPAADwv/0P//8P8P//Ef/////////x/////////9v/////AP//8f////////8R///////wv/0P//8P8AD//wDwDwAAAAAAAADwDwA=\",\n        \"mimeType\": \"image/x-mkcd-f4\",\n        \"displayName\": \"ninjaSprite\"\n    },\n    \"*\": {\n        \"mimeType\": \"image/x-mkcd-f4\",\n        \"dataEncoding\": \"base64\",\n        \"namespace\": \"myImages\"\n    }\n}",
+  "images.g.ts": "// Auto-generated code. Do not edit.\nnamespace myImages {\n\n    helpers._registerFactory(\"image\", function(name: string) {\n        switch(helpers.stringTrim(name)) {\n            case \"P4(`CNLh^)P:D9Kpa+R5\":\n            case \"ninjaSprite\":return img`\n. . . . f f f f f . . . \n. . . f f f f f f f . . \nf . f f f f f f f f f . \n. f f b f f f f f b f . \nf . f d 1 1 b 1 1 d f . \n. . f f 1 f d f 1 f f . \n. . . f f f f f f f . . \n. . . . f f f f f . . . \n. . . f f f f f f f . . \n. . f f f f f f f f f . \n. . f f f f f f f f f . \n. f . f f f f f f f . f \n. f . f f f f f f f . f \n. . . . f f f f f . . . \n. . . . f f . f f . . . \n. . . f f f . f f f . . \n`;\n        }\n        return null;\n    })\n\n    helpers._registerFactory(\"animation\", function(name: string) {\n        switch(helpers.stringTrim(name)) {\n\n        }\n        return null;\n    })\n\n    helpers._registerFactory(\"song\", function(name: string) {\n        switch(helpers.stringTrim(name)) {\n\n        }\n        return null;\n    })\n\n}\n// Auto-generated code. Do not edit.\n",
+  "main.blocks": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable id=\"W)t)RD5T*{kylRj-;L]a\">mySprite</variable><variable type=\"KIND_SpriteKind\" id=\"5bdv9B~8K.:##DQEJ`|g\">Player</variable><variable type=\"KIND_SpriteKind\" id=\"HLjMyi$oA.5AZIiJn#i;\">Projectile</variable><variable type=\"KIND_SpriteKind\" id=\"$n4#WqCz^D~`PmLUo]tx\">Food</variable><variable type=\"KIND_SpriteKind\" id=\"(uYX/Oj@Oq5d3SRMzGa8\">Enemy</variable></variables><block type=\"pxt-on-start\" x=\"0\" y=\"0\"><statement name=\"HANDLER\"><block type=\"variables_set\"><field name=\"VAR\" id=\"W)t)RD5T*{kylRj-;L]a\">mySprite</field><value name=\"VALUE\"><shadow xmlns=\"http://www.w3.org/1999/xhtml\" type=\"math_number\"><field name=\"NUM\">0</field></shadow><block type=\"spritescreate\"><value name=\"img\"><shadow type=\"screen_image_picker\"><field name=\"img\">assets.image`ninjaSprite`</field><data>{\"commentRefs\":[],\"fieldData\":{\"img\":\"P4(`CNLh^)P:D9Kpa+R5\"}}</data></shadow></value><value name=\"kind\"><shadow type=\"spritekind\"><field name=\"MEMBER\">Player</field></shadow></value></block></value></block></statement></block></xml>",
+  "main.ts": "let mySprite = sprites.create(assets.image`ninjaSprite`, SpriteKind.Player)\n",
+  "pxt.json": "{\n    \"name\": \"Ninja Sprite\",\n    \"description\": \"\",\n    \"dependencies\": {\n        \"device\": \"*\"\n    },\n    \"files\": [\n        \"main.blocks\",\n        \"main.ts\",\n        \"README.md\",\n        \"assets.json\",\n        \"images.g.jres\",\n        \"images.g.ts\"\n    ],\n    \"targetVersions\": {\n        \"branch\": \"v1.12.30\",\n        \"tag\": \"v1.12.30\",\n        \"commits\": \"https://github.com/microsoft/pxt-arcade/commits/33228b1cc7e1bea3f728c26a6047bdef35fd2c09\",\n        \"target\": \"1.12.30\",\n        \"pxt\": \"8.5.41\"\n    },\n    \"preferredEditor\": \"blocksprj\"\n}\n"
+}
+```
+```blocks
+for (let index = 0; index < 50; index++) {}
+info.onScore(10, function () {
+    game.gameOver(true)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Hider, function (sprite, otherSprite) {
+    mySprite2.setPosition(randint(0, 160), randint(0, 120))
+    info.changeScoreBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite, effects.disintegrate, 200)
+})
+let mySprite2: Sprite = null
+scene.setBackgroundColor(9)
+controller.moveSprite(mySprite)
+mySprite2.setStayInScreen(true)
+mySprite2.setPosition(randint(0, 160), randint(0, 120))
+mySprite2 = sprites.create(img`
+    . . . . f f f f f . . . 
+    . . . f f f f f f f . . 
+    f . f f f f f f f f f . 
+    . f f b f f f f f b f . 
+    f . f d 1 1 b 1 1 d f . 
+    . . f f 1 f d f 1 f f . 
+    . . . f f f f f f f . . 
+    . . . . f f f f f . . . 
+    . . . f f f f f f f . . 
+    . . f f f f f f f f f . 
+    . . f f f f f f f f f . 
+    . f . f f f f f f f . f 
+    . f . f f f f f f f . f 
+    . . . . f f f f f . . . 
+    . . . . f f . f f . . . 
+    . . . f f f . f f f . . 
+    `, SpriteKind.Hider)
+```
+
+```blockconfig.global
+
+
+
+```
+
+## Introduction @showdialog 
+
+In this tutorial, you will create your very own video game. A ninja is playing hide and seek, and it's up to you to find them in each round. The game will get harder each time you find the ninja. Follow the instructions, but you'll have a chance to be creative and add custom details at the end. Click **Ok** to get started! 
+
+![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs/master/images./hiding_ninja.gif) 
+
+ 
+
+## GBS: Hiding Ninja  
+
+### Making Our Background   
+
+First up, our game needs a background. Open ``||scene:Scene|`` and drag ``||scene:set background color||`` inside the ``||loops:on start||`` container already on the screen. 
+
+Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background. 
+
+Check the Game Window on the right side of the screen to see the selected background color appear! 
+
+Click **Next** to go to the next step. 
+
+  
+
+## GBS: Hiding Ninja  
+
+### Add Our Player Sprite 
+
+  
+
+Now we are going to create our main character. Open ``||sprites:Sprites||`` and drag the ``||variables:set [mySprite] to||`` block to the bottom of the ``||loops: on start||`` container. 
+
+Click the grey oval and select a sprite of your choice from **Gallery**. 
+
+Change the name of your sprite by clicking on **mySprite**, selecting **Rename variable**, and typing a new name, such as **hero**.  
+
+  
+
+  
+
+## GBS: Hiding Ninja  
+
+### Code Movement 
+
+  
+
+To move the Player sprite, open ``||controller:Controller||`` and drag ``||controller:move [mySprite] with buttons||`` block to the bottom of the ``||loops:on start||`` container. 
+
+  
+
+Change **mySprite** to the name of your Player sprite so the arrow keys and WASD will now move the Player. Try it out! 
+
+  
+
+ To prevent the Player sprite from going off screen, open ``||sprites:Sprites||`` and drag ``||sprites:set [mySprite] stay in screen |`` to the bottom of our ``||loops:on start||``, then change **mySprite** to your Player sprite's name. 
+
+  
+
+  
+
+## GBS: Hiding Ninja  
+
+### Add The Ninja 
+
+  
+
+  
+
+Now we are going to create our hiding character. Open ``||sprites:Sprites||`` and drag the ``||variables:set [mySprite] to||`` block to the bottom of the ``||loops:on start||`` container. 
+
+  
+
+  
+
+Click the grey oval and select the ninja picture under **My Assets**.  Click on **mySprite** then select **Rename variable** to change the sprite name to **ninja**. 
+
+Then, change the Sprite Kind by clicking on **Player**, selecting **Add a new kind** and typing the name **Hider**. 
+
+ 
+
+  
+
+  
+
+  
+
+## GBS: Hiding Ninja 
+
+### Hiding the Ninja 
+
+Set the position of the Hider sprite by opening Sprites and dragging out ``||sprites:set [mySprite] position to||`` then changing **mySprite** to the name of the Hider sprite. 
+
+For a good game of hide and seek, we can't hide in the same place every round.  
+
+  
+
+Open ``||math:Math||`` and drag a ``||math:pick random||`` block into the x oval of the ``||sprites:set  [mySprite] position to ||`` block. Change the 10 to 160. Drag another ``||math:pick random||`` into the y oval and change the 10 to 120. Now our ninja will start each game at a random place on the screen. 
+
+  
+
+## GBS: Hiding Ninja 
+
+### Finding the Ninja 
+
+Next up, we need to detect when the Player finds the Hider. Open Sprites and drag out a ``||sprites:on sprite of kind (Player) overlaps (otherSprite) of kind (Player)||`` container and place it anywhere in the editor. Change the second **Player** to **Hider**. 
+
+  
+
+Whenever the Player touches the Hider, the code we place inside will run. Right click on the ``||sprites:set [mySprite] position to||`` you already have in the ``||loops:on start||`` container and click **Duplicate** then move the duplicated block inside the overlap container. 
+
+  
+
+Try the game out now and see what happens when the Player overlaps the Hider sprite! 
+
+  
+
+  
+
+## GBS: Hiding Ninja 
+
+### Spawning The Enemies Part 1 
+
+  
+
+The Hider sprite is always out in the open and easy to find, so let's fix that. Now we are going to create our enemies to hide the ninja. Start by going to ``||loops:Loops||`` and grab the ``||loops:repeat [4] times||`` block. Place this at the bottom of the ``||sprites:overlap||`` container. 
+
+  
+
+The number sets the amount of new enemies that will spawn each round. Start trying it with 30, but you can always increase or decrease it as needed. 
+
+ 
+
+ 
+
+## GBS: Hiding Ninja 
+
+### Spawning The Enemies Part 2 
+
+ 
+
+Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it inside of the repeat loop. 
+
+  
+
+Click the grey oval and select a sprite of your choice from **Gallery**. Click on **mySprite** then select **Rename variable** to change the sprite name to match your enemy. 
+
+  
+
+Be sure to click on **Player** and change it to **Enemy**. This will be needed later. Also be sure to rename the variable from **mySprite** to something else. 
+
+  
+
+We need our enemies to be able to spawn everywhere, so let's set the position just like we did for the ninja. To do this we will once again right click on the ``||sprites:set [mySprite] position to||`` you already have and click **Duplicate** then move the duplicated block at the bottom of the repeat loop. 
+
+  
+
+  
+
+## GBS: Hiding Ninja 
+
+### Repeat The Enemies, Eat The Enemies 
+
+   
+
+To make sure we don't have hundreds of enemies at once, we the player to be able to clear a path through the sprites. To start, grab another ``||sprites:on sprite of kind (Player) overlaps otherSprite of kind (Player)||`` container. This time we want to change the second **Player** to **Enemy**. 
+
+  
+
+Open ``||sprites:Sprites||`` and drag the ``||sprites:destroy (mySprite)||`` inside this container. Drag an **otherSprite** where it says mySprite. Now click the (+) and pick a fun effect and how long the effect lasts. I recommend disintegrate and 200 ms, but you can pick anything. 
+
+  
+
+## GBS: Hiding Ninja  
+
+### A Way To Win 
+
+  
+
+Let’s program a way to end the game! Start by opening ``||info:Info||`` and dragging out a ``||info:change score by [1]||`` block. Put this at the top of the first ``||sprites:overlap||`` container you made that checks if the **Player** and **Hider** sprites touch.  
+
+  
+
+Now to check once we find the goal amount. Open ``||info:Info||`` and drag out a ``||info:on score [100]||`` container. Just like the other containers you’ve used, you can place this anywhere. Change the 100 to 10, so that the ninja only needs to be found 10 times. 
+
+  
+
+Finally, put a ``||game:game over||`` block inside this new container. The game will now end when the ninja is found 10 times! 
+
+  
+
+## GBS: Ninja Invasion 
+
+### ``||variables:C||`` ``||controller:u||`` ``||loops:s||`` ``||animation:t||`` ``||logic:o||`` ``||sprites:m||`` ``||music:i||`` ``||math:z||`` ``||scene:e||`` 
+
+**The tutorial is finished, but now it's time to customize your game to make it even better! Here are a few examples of things to try:** 
+
+  
+
+-Use a timer to challenge the user to complete the game in a certain amount of time. 
+
+  
+
+  
+
+-Customize the 'win' feature. Add a fun message or interesting effect. 
+
+  
+
+  
+
+-Put a dialog box or splash screen for game instructions. 
+
+  
+
+  
+
+-Customize the sprites and background to your liking. It's your game! (The fill option in the sprite editor can speed this process up) 
+
+ 
+
+  
+
+  
+
+-Put sound effects in the game for even more fun! 
+
+  
+
+  
+
+-Add animations. For example, make the player spin or change color as they move around. 
